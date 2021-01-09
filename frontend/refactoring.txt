@@ -1,0 +1,10 @@
+1- Converted Home Component from class base to functional component
+2- deleted setEditting function 
+3- seperated all the CURD methods in separate file actions/index.js
+4- I have created a config file in src folder for storing baseURL 
+   and modified in all places in actions/index.js
+   and inside services/api.js
+5- refactor NavBar and Home component in to single Body component 
+6- refactor AdduserForm , EditUserForm complex file into small reuseable components
+7- Proper naming & props destructuring
+8- tried to Split into small pieces

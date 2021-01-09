@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+.mynav{
+  background: #151515;
+  padding: 5px 40px;
+}
+.mynav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.mynav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+.mynav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+.mynav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.mynav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+.mynav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+.mynav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+.mynav ul li:hover a{
+  color: cyan;
+}
+.mynav ul li i{
+  font-size: 23px;
+}
+.mynav ul li.btn{
+  display: none;
+}
+.mynav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+@media all and (max-width: 900px){
+  .mynav{
+    padding: 5px 30px;
+  }
+  .mynav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  .mynav ul li.items.show{
+    display: block;
+  }
+  .mynav ul li.btn{
+    display: block;
+  }
+  .mynav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  .mynav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
